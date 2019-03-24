@@ -2,7 +2,7 @@ server:
   port: 19001
 spring:
   application:
-    name: CLOUD-FINCHLEY-CONSUMER
+    name: cloud-finchley-consumer
   profiles:
     active: default
 

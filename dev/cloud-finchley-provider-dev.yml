@@ -3,13 +3,8 @@ server:
 spring:
   application:
     name: cloud-finchley-provider
-
-logging:
-  level:
-    root: INFO
-    org.hibernate: INFO
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
-    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+  profiles:
+    active: default
 
 
 # 注：Spring Boot2不能用spring.datasource.schema/data指定初始化SQL脚本，否则与actuator不能共存
