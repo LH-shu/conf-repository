@@ -1,6 +1,9 @@
-profile: profile demo
+
 server:
   port: 18002
+spring:
+  application:
+    name: cloud-finchley-consumer
   
 http:
   multipart:
