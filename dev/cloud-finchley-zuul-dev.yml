@@ -2,7 +2,7 @@ server:
   port: 16000
 spring:
   application:
-    name: CLOUD-FINCHLEY-ZUUL
+    name: cloud-finchley-zuul
   profiles:
     active: default
 #获取权限访问路径       
@@ -30,11 +30,11 @@ zuul:
     error: 
       disable: true
   routes: 
-    dcp-app-dcs:
+    cloud-finchley-consumer:
       path: /v1/dcp-app-dcs/**
       serviceId: DCP-APP-DCS
       sensitiveHeaders:
-    dcp-sys-dispatch:
+    cloud-finchley-provider:
       path: /v1/dcp-sys-dispatch/**
       serviceId: DCP-SYS-DISPATCH
       sensitiveHeaders:
