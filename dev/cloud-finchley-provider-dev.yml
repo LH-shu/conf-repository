@@ -3,11 +3,6 @@ server:
 spring:
   application:
     name: cloud-finchley-provider
-  jpa:
-    generate-ddl: false
-    show-sql: true
-    hibernate:
-      ddl-auto: create-drop
 
 logging:
   level:
