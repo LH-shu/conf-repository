@@ -3,59 +3,8 @@ server:
 spring:
   application:
     name: cloud-finchley-zuul
-  #profiles:
-    #active: default
-#获取权限访问路径       
-dcp: 
-  zuul:
-    allroles: 
-      listmap: 
-        - path: /v1/dcp-sys-ios/right/initRoles #ios所有的角色
-        - path: /v1/dcp-sys-dispatch/right/initRoles #dispatch所有的角色
-        - path: /v1/dcp-sys-metadata/right/initRoles #metadata所有的角色
-    filter:
-      xss:
-        filter: "font,title"
-      ip:
-        iplist: "*.*.*.*"
-zuul:
-  #禁用zuul默认的异常处理filter---SendErrorFilter,自定义errorfilter
-  SendErrorFilter: 
-    error: 
-      disable: true
-  routes: 
-    cloud-finchley-consumer:
-      path: /v1/dcp-app-dcs/**
-      serviceId: DCP-APP-DCS
-      sensitiveHeaders:
-    cloud-finchley-provider:
-      path: /v1/dcp-sys-dispatch/**
-      serviceId: DCP-SYS-DISPATCH
-      sensitiveHeaders:
+  profiles:
+    active: default
 
-
-#ribbon超时
-ribbon:
-  MaxAutoRetriesNextServer: 0
-  MaxAutoRetries: 0
-  ReadTimeout: 60000
-  ConnectTimeout: 60000
-#Feign的超时
-feign:
-  client:
-    config:
-      feignName:
-        connectTimeout: 60000
-        readTimeout: 60000
-#hystrix的超时
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: true
-        isolation:
-          thread:
-            timeoutInMilliseconds: 60000
 
 
