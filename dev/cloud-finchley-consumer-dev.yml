@@ -1,0 +1,10 @@
+server:
+  port: 18001
+spring:
+  application:
+    name: CLOUD-FINCHLEY-CONSUMER
+  profiles:
+    active: default
+
+
+
