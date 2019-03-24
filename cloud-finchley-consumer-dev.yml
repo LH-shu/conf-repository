@@ -1,0 +1,8 @@
+profile: profile demo
+server:
+  port: 18002
+  
+http:
+  multipart:
+    max-file-size: 2000Mb      # Max file size，默认1M
+    max-request-size: 2500Mb   # Max request size，默认10M
