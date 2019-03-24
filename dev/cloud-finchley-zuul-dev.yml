@@ -3,19 +3,13 @@ server:
 spring:
   application:
     name: cloud-finchley-zuul
-  profiles:
-    active: default
+  #profiles:
+    #active: default
 #获取权限访问路径       
 dcp: 
   zuul:
     allroles: 
       listmap: 
-        - path: /v1/dcp-app-dcs/right/initRoles #dcs所有的角色
-        - path: /v1/dcp-app-pcs/right/initRoles #pcs所有的角色
-        - path: /v1/dcp-sys-store/right/initRoles #store所有的角色
-        - path: /v1/dcp-sys-notify/right/initRoles #notify所有的角色
-        - path: /v1/dcp-sys-log/right/initRoles #log所有的角色
-        - path: /v1/dcp-sys-lbpm/right/initRoles #lbpm所有的角色
         - path: /v1/dcp-sys-ios/right/initRoles #ios所有的角色
         - path: /v1/dcp-sys-dispatch/right/initRoles #dispatch所有的角色
         - path: /v1/dcp-sys-metadata/right/initRoles #metadata所有的角色
