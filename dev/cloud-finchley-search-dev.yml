@@ -1,0 +1,26 @@
+server:
+  port: 18004
+
+spring:
+  application:
+    name: dcp-sys-search
+  messages:
+          basename: i18n/messages
+  #datasource:
+    #type: com.alibaba.druid.pool.DruidDataSource
+    #url: jdbc:dm://192.168.1.172:7777
+    #username: DCP-SYS-SEARCH
+    #password: 123456789
+    #driver-class-name: dm.jdbc.driver.DmDriver
+feign:
+  hystrix:
+    enabled: true
+ribbon:
+  MaxAutoRetriesNextServer: 0
+dcp:
+  elasticsearch:
+    cluster-nodes: 127.0.0.1:9200
+    username: elastic
+    password: vziqWbNF2kU6CTupboPz
+hotWord:
+  time: 7
