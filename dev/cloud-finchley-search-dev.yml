@@ -1,9 +1,9 @@
 server:
-  port: 18004
+  port: 16004
 
 spring:
   application:
-    name: dcp-sys-search
+    name: cloud-finchley-search
   messages:
           basename: i18n/messages
   #datasource:
